@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "AngularShoppingCart"
+  "defaultProject": "AngularShoppingCart",
+  "cli": {
+    "analytics": "0a105eac-6be8-442d-b588-dfaa43f62a6e"
+  }
 }

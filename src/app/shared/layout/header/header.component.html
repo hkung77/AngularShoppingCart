@@ -1,0 +1,26 @@
+<nav class="nav header-container">
+  <ul ngbNav #nav="ngbNav" class="nav-pills header-content">
+    <li ngbNavItem>
+      <a ngbNavLink>All Categories</a>
+      <!-- <ng-template ngbNavContent>First content</ng-template> -->
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink>Bread</a>
+      <!-- <ng-template ngbNavContent>Second content</ng-template> -->
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink>Fruits</a>
+      <!-- <ng-template ngbNavContent>Second content</ng-template> -->
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink>Dairy</a>
+      <!-- <ng-template ngbNavContent>Second content</ng-template> -->
+    </li>
+  </ul>
+    <div class="cart-container">
+        <!-- <ng-template ngbNavContent>Second content</ng-template> -->
+        <fa-icon class="cart-icon" [icon]="faShoppingCart"></fa-icon>
+    </div>
+</nav>
+<!-- NOTE: Used for submenu's in nav -->
+<!-- <div [ngbNavOutlet]="nav" class="bg-header"></div> -->
