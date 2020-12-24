@@ -1,11 +1,11 @@
 <nav class="nav header-container">
   <ul ngbNav #nav="ngbNav" class="nav-pills header-content">
     <li ngbNavItem>
-      <a ngbNavLink>All Categories</a>
+      <a ngbNavLink>All</a>
       <!-- <ng-template ngbNavContent>First content</ng-template> -->
     </li>
     <li ngbNavItem>
-      <a ngbNavLink>Bread</a>
+      <a ngbNavLink>Random</a>
       <!-- <ng-template ngbNavContent>Second content</ng-template> -->
     </li>
     <li ngbNavItem>
@@ -17,10 +17,19 @@
       <!-- <ng-template ngbNavContent>Second content</ng-template> -->
     </li>
   </ul>
-    <div class="cart-container">
-        <!-- <ng-template ngbNavContent>Second content</ng-template> -->
-        <fa-icon class="cart-icon" [icon]="faShoppingCart"></fa-icon>
+  <div class="search-container col-5 input-group">
+    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-primary" type="button">
+        <fa-icon class="search" [icon]="faSearch"></fa-icon>
+      </button>
     </div>
+  </div>
+
+    <!-- <div class="">
+      <input class>
+        <!-- <ng-template ngbNavContent>Second content</ng-template> -->
+        
 </nav>
 <!-- NOTE: Used for submenu's in nav -->
 <!-- <div [ngbNavOutlet]="nav" class="bg-header"></div> -->

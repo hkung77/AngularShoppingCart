@@ -12,12 +12,12 @@
   flex-grow: 1;
 }
 
-.cart-container {
+.search-container {
   display: flex;
   align-self: center;
 }
 
-.cart-icon {
+.search {
   &:hover {
     cursor: pointer;
   }
