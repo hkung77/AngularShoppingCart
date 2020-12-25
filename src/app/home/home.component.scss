@@ -30,3 +30,15 @@ ul {
   display: flex;
   flex-direction: column;
 }
+
+.beer-description {
+  overflow-y: scroll;
+  height: 15em;
+}
+
+.pagination-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 2em;
+}

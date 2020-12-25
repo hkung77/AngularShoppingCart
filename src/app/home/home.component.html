@@ -1,11 +1,22 @@
-<ul id="app-home" class="beer-list-container">
-  <li *ngFor="let beer of beers">
-    <div class="card-container">
-      <img class="beer-image" src={{beer.image_url}} alt="Image of a beer">
-      <div class="info-container">
-        <span><b>Name:&nbsp;</b>{{beer.name}}</span> 
-        <span><b>ABV:&nbsp;</b>{{beer.abv}}%</span>
+<div id="app-home">
+  <div class="pagination-container">
+    <button *ngIf="hasPrevious()" (click)="onPreviousPress()" type="button" class="btn btn-primary">Prev</button>
+    <button type="button" (click)="onNextPress()" class="btn btn-primary ml-3">Next</button>
+  </div>
+  <ul id="app-home" class="beer-list-container">
+    <li *ngFor="let beer of beers">
+      <div class="card-container">
+        <img class="beer-image" src={{beer.image_url}} alt="Image of a beer">
+        <div class="info-container">
+          <span><b>Name:&nbsp;</b>{{beer.name}}</span>
+          <span><b>ABV:&nbsp;</b>{{beer.abv}}%</span>
+          <span class="beer-description"><b>Description:&nbsp;</b>{{beer.description}}%</span>
+        </div>
       </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
+  <div class="pagination-container">
+    <button *ngIf="hasPrevious()" (click)="onPreviousPress()" type="button" class="btn btn-primary">Prev</button>
+    <button type="button" (click)="onNextPress()" class="btn btn-primary ml-3">Next</button>
+  </div>
+</div>
