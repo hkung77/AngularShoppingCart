@@ -1,1 +1,11 @@
-<p>home works!</p>
+<ul id="app-home" class="beer-list-container">
+  <li *ngFor="let beer of beers">
+    <div class="card-container">
+      <img class="beer-image" src={{beer.image_url}} alt="Image of a beer">
+      <div class="info-container">
+        <span><b>Name:&nbsp;</b>{{beer.name}}</span> 
+        <span><b>ABV:&nbsp;</b>{{beer.abv}}%</span>
+      </div>
+    </div>
+  </li>
+</ul>

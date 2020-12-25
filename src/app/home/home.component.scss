@@ -1,0 +1,32 @@
+.beer-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.card-container {
+  display: flex;
+  width: 20rem;
+  height: 25rem;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  padding: 1em;
+}
+
+.beer-image {
+  width: 5vw;
+  height: 20rem;
+  object-fit: contain;
+}
+
+.info-container {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
