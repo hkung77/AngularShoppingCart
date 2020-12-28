@@ -4,7 +4,7 @@
     <button type="button" (click)="onNextPress()" class="btn btn-primary ml-3">Next</button>
   </div>
   <ul id="app-home" class="beer-list-container">
-    <li *ngFor="let beer of beers">
+    <li *ngFor="let beer of beers()">
       <div class="card-container">
         <img class="beer-image" src={{beer.image_url}} alt="Image of a beer">
         <div class="info-container">

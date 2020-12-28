@@ -10,9 +10,9 @@
     </li>
   </ul>
   <div class="search-container col-5 input-group">
-    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+    <input #searchInput type="text" class="form-control" (keyup.enter)="onSearchPress(searchInput.value)" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
     <div class="input-group-append">
-      <button class="btn btn-outline-primary" type="button">
+      <button class="btn btn-outline-primary" type="button" (click)="onSearchPress(searchInput.value)">
         <fa-icon class="search" [icon]="faSearch"></fa-icon>
       </button>
     </div>

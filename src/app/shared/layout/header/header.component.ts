@@ -9,22 +9,23 @@ import { Beer } from '../../../services/beer.interface';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public beers: Beer[] = [];
-  private _searchText: string = "";
+  public faSearch = faSearch;
 
   constructor(private _beerService: BeerService) { }
 
-  ngOnInit(): void {
-    this._beerService.getBeers().subscribe(data => {
-      this.beers = data;
-    });
-  }
+  ngOnInit(): void { }
 
-  onSearchPress(): void {
-    this._beerService.setFilter(this._searchText);
-    this._beerService.getSearchedBeers().subscribe(data => {
-      this.beers = data;
-    });
+  onSearchPress(searchText: string): void {
+    this._beerService.setFilter(searchText);
+    if (searchText.length > 0) {
+      this._beerService.getSearchedBeers().subscribe(data => {
+        this._beerService.setBeers(data);
+      });
+    } else {
+      this._beerService.getBeers().subscribe(data => {
+        this._beerService.setBeers(data);
+      })
+    }
 
     window.scroll(0, 0);
   }
